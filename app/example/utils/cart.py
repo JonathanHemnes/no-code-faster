@@ -8,7 +8,7 @@ def create_price_dict(cart):
     }
 
     for item in cart.items:
-        taxes = item.product.price * (item.product.tax_rate / 100)
+        taxes = item.product.price * (cart.tax_rate / 100)
         total_price = item.product.price + taxes
         # the man always gets his cut
         stripe_fees = total_price * (3/100)
