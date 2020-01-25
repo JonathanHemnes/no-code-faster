@@ -5,7 +5,6 @@ class Product(models.Model):
 
 class Cart(models.Model):
     purchase_date = models.DateTimeField()
-    tax_rate = models.IntegerField()
 
     @property
     def price(self):
