@@ -3,6 +3,7 @@ from django.db import models
 class Product(models.Model):
     price = models.DecimalField(max_digits=20, decimal_places=2)
     name = models.TextField()
+    tax_rate = models.IntegerField()
 
 class Cart(models.Model):
     purchase_date = models.DateTimeField()
